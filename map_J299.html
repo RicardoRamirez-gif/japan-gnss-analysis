@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e83dd6f718ecc5e5b0563ace25246f3e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e83dd6f718ecc5e5b0563ace25246f3e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e83dd6f718ecc5e5b0563ace25246f3e = L.map(
+                "map_e83dd6f718ecc5e5b0563ace25246f3e",
+                {
+                    center: [35.1901081152, 136.82883156130003],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bb95eb77582242cd653320ed1809c220 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bb95eb77582242cd653320ed1809c220.addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+            var circle_5749ff205f7289467b6a28b68aa0133e = L.circle(
+                [35.1901081152, 136.82883156130003],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500000, "stroke": true, "weight": 2}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_509e3ba7d4d54566d62c85486b7e67e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb1e5b68b98717a6e6108728700e32ab = $(`<div id="html_fb1e5b68b98717a6e6108728700e32ab" style="width: 100.0%; height: 100.0%;">Range: 500.0 km</div>`)[0];
+                popup_509e3ba7d4d54566d62c85486b7e67e7.setContent(html_fb1e5b68b98717a6e6108728700e32ab);
+            
+        
+
+        circle_5749ff205f7289467b6a28b68aa0133e.bindPopup(popup_509e3ba7d4d54566d62c85486b7e67e7)
+        ;
+
+        
+    
+    
+            var circle_ee6d7f38243d18da47563ca58078a61a = L.circle(
+                [35.1901081152, 136.82883156130003],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000000, "stroke": true, "weight": 2}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_e5c1cfcfae735ca77f89259c846a1b06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11dcc56372cf9d0bf8369f25e7896126 = $(`<div id="html_11dcc56372cf9d0bf8369f25e7896126" style="width: 100.0%; height: 100.0%;">Range: 1000.0 km</div>`)[0];
+                popup_e5c1cfcfae735ca77f89259c846a1b06.setContent(html_11dcc56372cf9d0bf8369f25e7896126);
+            
+        
+
+        circle_ee6d7f38243d18da47563ca58078a61a.bindPopup(popup_e5c1cfcfae735ca77f89259c846a1b06)
+        ;
+
+        
+    
+    
+            var circle_marker_092b926e8d09c99ad41e5453a4d535cb = L.circleMarker(
+                [35.1901081152, 136.82883156130003],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_2eca270fdf04dbc592a7959dd0881741 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_abf30c8b947ff9f070a322127382da7c = $(`<div id="html_abf30c8b947ff9f070a322127382da7c" style="width: 100.0%; height: 100.0%;"><b>Station J299</b><br>GNSS Monitoring Point</div>`)[0];
+                popup_2eca270fdf04dbc592a7959dd0881741.setContent(html_abf30c8b947ff9f070a322127382da7c);
+            
+        
+
+        circle_marker_092b926e8d09c99ad41e5453a4d535cb.bindPopup(popup_2eca270fdf04dbc592a7959dd0881741)
+        ;
+
+        
+    
+    
+            var circle_marker_442ce72b523aab53ea00d9f1db7b8cf9 = L.circleMarker(
+                [31.7599, 131.5021],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.399999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_1cf0886fc60fdd0026cc1104874300cc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cae0912566b64a8adff73c9419d2f486 = $(`<div id="html_cae0912566b64a8adff73c9419d2f486" style="width: 100.0%; height: 100.0%;"><b>2024 Hyuganada Sea, Japan Earthquake</b><br>Mag: 7.1<br>Date: 2024-08-08</div>`)[0];
+                popup_1cf0886fc60fdd0026cc1104874300cc.setContent(html_cae0912566b64a8adff73c9419d2f486);
+            
+        
+
+        circle_marker_442ce72b523aab53ea00d9f1db7b8cf9.bindPopup(popup_1cf0886fc60fdd0026cc1104874300cc)
+        ;
+
+        
+    
+    
+            var circle_marker_20d1159bf9b8aa613834341adfa8fed9 = L.circleMarker(
+                [37.4874, 137.271],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.0, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_8e96e9cad325a175487fdfc464736377 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_29ad474503be3f373c43f8b2b4d99a0e = $(`<div id="html_29ad474503be3f373c43f8b2b4d99a0e" style="width: 100.0%; height: 100.0%;"><b>2024 Noto Peninsula, Japan Earthquake</b><br>Mag: 7.5<br>Date: 2023-12-31</div>`)[0];
+                popup_8e96e9cad325a175487fdfc464736377.setContent(html_29ad474503be3f373c43f8b2b4d99a0e);
+            
+        
+
+        circle_marker_20d1159bf9b8aa613834341adfa8fed9.bindPopup(popup_8e96e9cad325a175487fdfc464736377)
+        ;
+
+        
+    
+    
+            var circle_marker_80eed9997b7bb35d2b30f4de6d5943af = L.circleMarker(
+                [37.7132, 141.5793],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.2, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_4750dfac472c7641396ac53e0c231351 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_31a26aec484676d23e407d1a6cbb725b = $(`<div id="html_31a26aec484676d23e407d1a6cbb725b" style="width: 100.0%; height: 100.0%;"><b>57 km ENE of Namie, Japan</b><br>Mag: 7.3<br>Date: 2022-03-16</div>`)[0];
+                popup_4750dfac472c7641396ac53e0c231351.setContent(html_31a26aec484676d23e407d1a6cbb725b);
+            
+        
+
+        circle_marker_80eed9997b7bb35d2b30f4de6d5943af.bindPopup(popup_4750dfac472c7641396ac53e0c231351)
+        ;
+
+        
+    
+    
+            var circle_marker_6a302b5993e7ba32bf2adc7135fce56c = L.circleMarker(
+                [38.4515, 141.6477],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_c19e0bca87841333cf1b280edf657623 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eb9ff15b6e069ba09243e42c5e3007c2 = $(`<div id="html_eb9ff15b6e069ba09243e42c5e3007c2" style="width: 100.0%; height: 100.0%;"><b>30 km E of Ishinomaki, Japan</b><br>Mag: 7<br>Date: 2021-03-20</div>`)[0];
+                popup_c19e0bca87841333cf1b280edf657623.setContent(html_eb9ff15b6e069ba09243e42c5e3007c2);
+            
+        
+
+        circle_marker_6a302b5993e7ba32bf2adc7135fce56c.bindPopup(popup_c19e0bca87841333cf1b280edf657623)
+        ;
+
+        
+    
+    
+            var circle_marker_ad75b178a2cd30df8c7049bfb0bfc7b1 = L.circleMarker(
+                [37.7265, 141.7751],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.399999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_0a58be54a1383edf4feff07cebcd7637 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c0360315cd82b9dfbc3b76b26e2fcb8f = $(`<div id="html_c0360315cd82b9dfbc3b76b26e2fcb8f" style="width: 100.0%; height: 100.0%;"><b>73 km ENE of Namie, Japan</b><br>Mag: 7.1<br>Date: 2021-02-13</div>`)[0];
+                popup_0a58be54a1383edf4feff07cebcd7637.setContent(html_c0360315cd82b9dfbc3b76b26e2fcb8f);
+            
+        
+
+        circle_marker_ad75b178a2cd30df8c7049bfb0bfc7b1.bindPopup(popup_0a58be54a1383edf4feff07cebcd7637)
+        ;
+
+        
+    
+    
+            var circle_marker_5b8549fa6b6f95b8c3adf9126f73000f = L.circleMarker(
+                [32.7906, 130.7543],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_3a56830c134a6d708462ce03c7a8b894 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_180085d6da58bd56ed071bc573eea8a9 = $(`<div id="html_180085d6da58bd56ed071bc573eea8a9" style="width: 100.0%; height: 100.0%;"><b>6 km ESE of Kumamoto, Japan</b><br>Mag: 7<br>Date: 2016-04-15</div>`)[0];
+                popup_3a56830c134a6d708462ce03c7a8b894.setContent(html_180085d6da58bd56ed071bc573eea8a9);
+            
+        
+
+        circle_marker_5b8549fa6b6f95b8c3adf9126f73000f.bindPopup(popup_3a56830c134a6d708462ce03c7a8b894)
+        ;
+
+        
+    
+    
+            var circle_marker_20f7481e357f246582b4221f66ea4b96 = L.circleMarker(
+                [27.8386, 140.4931],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.2, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_3de84a603c106d286b36b105d6ac9cd0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2de842956f958ef94f07df3a392c2d18 = $(`<div id="html_2de842956f958ef94f07df3a392c2d18" style="width: 100.0%; height: 100.0%;"><b>Bonin Islands, Japan region</b><br>Mag: 7.8<br>Date: 2015-05-30</div>`)[0];
+                popup_3de84a603c106d286b36b105d6ac9cd0.setContent(html_2de842956f958ef94f07df3a392c2d18);
+            
+        
+
+        circle_marker_20f7481e357f246582b4221f66ea4b96.bindPopup(popup_3de84a603c106d286b36b105d6ac9cd0)
+        ;
+
+        
+    
+    
+            var circle_marker_0e7ba0082db365b6c59c08aa898ea4ee = L.circleMarker(
+                [37.1557, 144.6611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.399999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_655d6c9fb74d3117ca6ae42635d4c749 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8edc04ab425c0bd89d724968a2d2b968 = $(`<div id="html_8edc04ab425c0bd89d724968a2d2b968" style="width: 100.0%; height: 100.0%;"><b>off the east coast of Honshu, Japan</b><br>Mag: 7.1<br>Date: 2013-10-25</div>`)[0];
+                popup_655d6c9fb74d3117ca6ae42635d4c749.setContent(html_8edc04ab425c0bd89d724968a2d2b968);
+            
+        
+
+        circle_marker_0e7ba0082db365b6c59c08aa898ea4ee.bindPopup(popup_655d6c9fb74d3117ca6ae42635d4c749)
+        ;
+
+        
+    
+    
+            var circle_marker_dea05ba38cf6f493868bc251a1dd47d9 = L.circleMarker(
+                [37.89, 143.949],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.2, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_9d3ffd6e21b7befae71c8eaa63c463c0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a463607f2544c4b4c897a6c57e8f1425 = $(`<div id="html_a463607f2544c4b4c897a6c57e8f1425" style="width: 100.0%; height: 100.0%;"><b>234 km SE of ?funato, Japan</b><br>Mag: 7.3<br>Date: 2012-12-07</div>`)[0];
+                popup_9d3ffd6e21b7befae71c8eaa63c463c0.setContent(html_a463607f2544c4b4c897a6c57e8f1425);
+            
+        
+
+        circle_marker_dea05ba38cf6f493868bc251a1dd47d9.bindPopup(popup_9d3ffd6e21b7befae71c8eaa63c463c0)
+        ;
+
+        
+    
+    
+            var circle_marker_7b4e451a3285d9009b85bd2f6974b612 = L.circleMarker(
+                [38.034, 143.264],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_fcd1672e61ba9c9805ea7dd538e67626 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0cd52232969ac0d1ab8fd1b47ade73c2 = $(`<div id="html_0cd52232969ac0d1ab8fd1b47ade73c2" style="width: 100.0%; height: 100.0%;"><b>177 km ESE of Ishinomaki, Japan</b><br>Mag: 7<br>Date: 2011-07-09</div>`)[0];
+                popup_fcd1672e61ba9c9805ea7dd538e67626.setContent(html_0cd52232969ac0d1ab8fd1b47ade73c2);
+            
+        
+
+        circle_marker_7b4e451a3285d9009b85bd2f6974b612.bindPopup(popup_fcd1672e61ba9c9805ea7dd538e67626)
+        ;
+
+        
+    
+    
+            var circle_marker_93e54f327472781d7169555cc88f225f = L.circleMarker(
+                [38.276, 141.588],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.399999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_21748642ca563cd5900db13230d4a2ec = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5eb91d8a9466edd125c9c4dd72707c05 = $(`<div id="html_5eb91d8a9466edd125c9c4dd72707c05" style="width: 100.0%; height: 100.0%;"><b>29 km ESE of Ishinomaki, Japan</b><br>Mag: 7.1<br>Date: 2011-04-07</div>`)[0];
+                popup_21748642ca563cd5900db13230d4a2ec.setContent(html_5eb91d8a9466edd125c9c4dd72707c05);
+            
+        
+
+        circle_marker_93e54f327472781d7169555cc88f225f.bindPopup(popup_21748642ca563cd5900db13230d4a2ec)
+        ;
+
+        
+    
+    
+            var circle_marker_13ca24667bb7626c6c2c7bcaa2eac2af = L.circleMarker(
+                [38.058, 144.59],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_1ea5a5bf19a7f8d371bc4aaca0322f96 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c7cbf4182a1df078d65344b6f956c9f7 = $(`<div id="html_c7cbf4182a1df078d65344b6f956c9f7" style="width: 100.0%; height: 100.0%;"><b>272 km ESE of Kamaishi, Japan</b><br>Mag: 7.7<br>Date: 2011-03-10</div>`)[0];
+                popup_1ea5a5bf19a7f8d371bc4aaca0322f96.setContent(html_c7cbf4182a1df078d65344b6f956c9f7);
+            
+        
+
+        circle_marker_13ca24667bb7626c6c2c7bcaa2eac2af.bindPopup(popup_1ea5a5bf19a7f8d371bc4aaca0322f96)
+        ;
+
+        
+    
+    
+            var circle_marker_79fbc17dfce7151b4fdf334cb66a7a21 = L.circleMarker(
+                [36.281, 141.111],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.600000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_eca2ff214051598d434587891cc1bbe4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ef8219439015da8dc977f53b9f65f1b4 = $(`<div id="html_ef8219439015da8dc977f53b9f65f1b4" style="width: 100.0%; height: 100.0%;"><b>47 km E of ?arai, Japan</b><br>Mag: 7.9<br>Date: 2011-03-10</div>`)[0];
+                popup_eca2ff214051598d434587891cc1bbe4.setContent(html_ef8219439015da8dc977f53b9f65f1b4);
+            
+        
+
+        circle_marker_79fbc17dfce7151b4fdf334cb66a7a21.bindPopup(popup_eca2ff214051598d434587891cc1bbe4)
+        ;
+
+        
+    
+    
+            var circle_marker_3ed1604ad817a4dd64ac3aee605070b5 = L.circleMarker(
+                [38.297, 142.373],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.4, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_6edff68a5284acf2f877169d455e4697 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_35cd57439de311e5ceb487449328bc82 = $(`<div id="html_35cd57439de311e5ceb487449328bc82" style="width: 100.0%; height: 100.0%;"><b>2011 Great Tohoku Earthquake, Japan</b><br>Mag: 9.1<br>Date: 2011-03-10</div>`)[0];
+                popup_6edff68a5284acf2f877169d455e4697.setContent(html_35cd57439de311e5ceb487449328bc82);
+            
+        
+
+        circle_marker_3ed1604ad817a4dd64ac3aee605070b5.bindPopup(popup_6edff68a5284acf2f877169d455e4697)
+        ;
+
+        
+    
+    
+            var circle_marker_635d3d85d5cd97d8906b2e158bdad793 = L.circleMarker(
+                [38.435, 142.842],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.2, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_b3d6e300316db64370fb9d89af39100f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b7a9a7344aca0649ecf38aabc59fdef9 = $(`<div id="html_b7a9a7344aca0649ecf38aabc59fdef9" style="width: 100.0%; height: 100.0%;"><b>120 km SE of ?funato, Japan</b><br>Mag: 7.3<br>Date: 2011-03-08</div>`)[0];
+                popup_b3d6e300316db64370fb9d89af39100f.setContent(html_b7a9a7344aca0649ecf38aabc59fdef9);
+            
+        
+
+        circle_marker_635d3d85d5cd97d8906b2e158bdad793.bindPopup(popup_b3d6e300316db64370fb9d89af39100f)
+        ;
+
+        
+    
+    
+            var circle_marker_977a56a38fca3388210a729af6a26bcb = L.circleMarker(
+                [33.167, 137.944],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.399999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_a6328886051e4a52223d856d01b7b4bd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c53a54470c91ddc2e260b0a4ccb0c05a = $(`<div id="html_c53a54470c91ddc2e260b0a4ccb0c05a" style="width: 100.0%; height: 100.0%;"><b>161 km S of ?yama, Japan</b><br>Mag: 7.1<br>Date: 2009-08-09</div>`)[0];
+                popup_a6328886051e4a52223d856d01b7b4bd.setContent(html_c53a54470c91ddc2e260b0a4ccb0c05a);
+            
+        
+
+        circle_marker_977a56a38fca3388210a729af6a26bcb.bindPopup(popup_a6328886051e4a52223d856d01b7b4bd)
+        ;
+
+        
+    
+    
+            var circle_marker_ac1173ca6cb831f94b44df2e361e5654 = L.circleMarker(
+                [37.552, 142.214],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_7d85bbee03b65e3df954cdaf67a3385b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_87995e986d602b37f95a17c35a996398 = $(`<div id="html_87995e986d602b37f95a17c35a996398" style="width: 100.0%; height: 100.0%;"><b>107 km E of Namie, Japan</b><br>Mag: 7<br>Date: 2008-07-18</div>`)[0];
+                popup_7d85bbee03b65e3df954cdaf67a3385b.setContent(html_87995e986d602b37f95a17c35a996398);
+            
+        
+
+        circle_marker_ac1173ca6cb831f94b44df2e361e5654.bindPopup(popup_7d85bbee03b65e3df954cdaf67a3385b)
+        ;
+
+        
+    
+    
+            var circle_marker_e4d6a4156d7a3229ee587dd94f3f4374 = L.circleMarker(
+                [38.107, 144.896],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_2fd9c6dddd4b85f7ea4dd0bf28cb1581 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2e3b163708966281ee339b98bf88ceb9 = $(`<div id="html_2e3b163708966281ee339b98bf88ceb9" style="width: 100.0%; height: 100.0%;"><b>293 km ESE of Kamaishi, Japan</b><br>Mag: 7<br>Date: 2005-11-14</div>`)[0];
+                popup_2fd9c6dddd4b85f7ea4dd0bf28cb1581.setContent(html_2e3b163708966281ee339b98bf88ceb9);
+            
+        
+
+        circle_marker_e4d6a4156d7a3229ee587dd94f3f4374.bindPopup(popup_2fd9c6dddd4b85f7ea4dd0bf28cb1581)
+        ;
+
+        
+    
+    
+            var circle_marker_da414b3d6b4b360e89c7bfd256ee4f79 = L.circleMarker(
+                [38.276, 142.039],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_342ee65baa06278d407f006168d993da = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_afffab27e8cb5240d3a49c263b85ea49 = $(`<div id="html_afffab27e8cb5240d3a49c263b85ea49" style="width: 100.0%; height: 100.0%;"><b>66 km ESE of Ishinomaki, Japan</b><br>Mag: 7.2<br>Date: 2005-08-15</div>`)[0];
+                popup_342ee65baa06278d407f006168d993da.setContent(html_afffab27e8cb5240d3a49c263b85ea49);
+            
+        
+
+        circle_marker_da414b3d6b4b360e89c7bfd256ee4f79.bindPopup(popup_342ee65baa06278d407f006168d993da)
+        ;
+
+        
+    
+    
+            var circle_marker_39e89ef276c58696909d0ee491f16bae = L.circleMarker(
+                [33.184, 137.071],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.600000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_f6c1255ab17d7e1160e477d7c43793ea = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_44985b21cc338440b4fab5bb6dae8056 = $(`<div id="html_44985b21cc338440b4fab5bb6dae8056" style="width: 100.0%; height: 100.0%;"><b>118 km ESE of Shing?, Japan</b><br>Mag: 7.4<br>Date: 2004-09-05</div>`)[0];
+                popup_f6c1255ab17d7e1160e477d7c43793ea.setContent(html_44985b21cc338440b4fab5bb6dae8056);
+            
+        
+
+        circle_marker_39e89ef276c58696909d0ee491f16bae.bindPopup(popup_f6c1255ab17d7e1160e477d7c43793ea)
+        ;
+
+        
+    
+    
+            var circle_marker_8f617d0201cf0f829985e19b7436f6bc = L.circleMarker(
+                [33.07, 136.618],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_a1dcb10b2358e6178603844ec8bb7410 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f110b4bf6ac5e328706ca5826da10f39 = $(`<div id="html_f110b4bf6ac5e328706ca5826da10f39" style="width: 100.0%; height: 100.0%;"><b>94 km SE of Shing?, Japan</b><br>Mag: 7.2<br>Date: 2004-09-05</div>`)[0];
+                popup_a1dcb10b2358e6178603844ec8bb7410.setContent(html_f110b4bf6ac5e328706ca5826da10f39);
+            
+        
+
+        circle_marker_8f617d0201cf0f829985e19b7436f6bc.bindPopup(popup_a1dcb10b2358e6178603844ec8bb7410)
+        ;
+
+        
+    
+    
+            var circle_marker_d4feee600eadf35d7408510182d2a7a9 = L.circleMarker(
+                [37.812, 142.619],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_73a7a581287420d3601f2a9797291840 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_20a13ffc0cf4d6e3026d6f07e78b0acf = $(`<div id="html_20a13ffc0cf4d6e3026d6f07e78b0acf" style="width: 100.0%; height: 100.0%;"><b>133 km ESE of Ishinomaki, Japan</b><br>Mag: 7<br>Date: 2003-10-30</div>`)[0];
+                popup_73a7a581287420d3601f2a9797291840.setContent(html_20a13ffc0cf4d6e3026d6f07e78b0acf);
+            
+        
+
+        circle_marker_d4feee600eadf35d7408510182d2a7a9.bindPopup(popup_73a7a581287420d3601f2a9797291840)
+        ;
+
+        
+    
+    
+            var circle_marker_359a21b5ace7ab0ce11d80cd946fb50a = L.circleMarker(
+                [41.774, 143.593],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.600000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_6f2b92fdc492d5a2a5b10d5a2ff4a4f8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_10b8e6599875e9af25604e20afce2077 = $(`<div id="html_10b8e6599875e9af25604e20afce2077" style="width: 100.0%; height: 100.0%;"><b>119 km ESE of Shizunai-furukawach?, Japan</b><br>Mag: 7.4<br>Date: 2003-09-25</div>`)[0];
+                popup_6f2b92fdc492d5a2a5b10d5a2ff4a4f8.setContent(html_10b8e6599875e9af25604e20afce2077);
+            
+        
+
+        circle_marker_359a21b5ace7ab0ce11d80cd946fb50a.bindPopup(popup_6f2b92fdc492d5a2a5b10d5a2ff4a4f8)
+        ;
+
+        
+    
+    
+            var circle_marker_d3850f387261dad9fcb3b9b0538a61e2 = L.circleMarker(
+                [41.815, 143.91],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.64, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_80100a004a64872b9906c8ecd9a8a9ca = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3e0563fbeb8f2dc40f6f3fced6f14e28 = $(`<div id="html_3e0563fbeb8f2dc40f6f3fced6f14e28" style="width: 100.0%; height: 100.0%;"><b>2003 Tokachi-Oki Earthquake</b><br>Mag: 8.16<br>Date: 2003-09-25</div>`)[0];
+                popup_80100a004a64872b9906c8ecd9a8a9ca.setContent(html_3e0563fbeb8f2dc40f6f3fced6f14e28);
+            
+        
+
+        circle_marker_d3850f387261dad9fcb3b9b0538a61e2.bindPopup(popup_80100a004a64872b9906c8ecd9a8a9ca)
+        ;
+
+        
+    
+    
+            var circle_marker_8ec18142a13d8714ee9a799af058ad76 = L.circleMarker(
+                [38.849, 141.568],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_31b33799b2870bc7dbf6ecf226d50034 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b92f9d0460b8f36eea85d7645a5a4aac = $(`<div id="html_b92f9d0460b8f36eea85d7645a5a4aac" style="width: 100.0%; height: 100.0%;"><b>27 km SSW of ?funato, Japan</b><br>Mag: 7<br>Date: 2003-05-26</div>`)[0];
+                popup_31b33799b2870bc7dbf6ecf226d50034.setContent(html_b92f9d0460b8f36eea85d7645a5a4aac);
+            
+        
+
+        circle_marker_8ec18142a13d8714ee9a799af058ad76.bindPopup(popup_31b33799b2870bc7dbf6ecf226d50034)
+        ;
+
+        
+    
+    
+            var circle_marker_2b4b5f8c03db71e431beb5cbc38b0e81 = L.circleMarker(
+                [28.856, 139.556],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.600000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_a9c891449ad0c94d6e60b65011f59ed3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8017374de18b8c706cc57a9aaa34df0b = $(`<div id="html_8017374de18b8c706cc57a9aaa34df0b" style="width: 100.0%; height: 100.0%;"><b>Bonin Islands, Japan region</b><br>Mag: 7.4<br>Date: 2000-08-06</div>`)[0];
+                popup_a9c891449ad0c94d6e60b65011f59ed3.setContent(html_8017374de18b8c706cc57a9aaa34df0b);
+            
+        
+
+        circle_marker_2b4b5f8c03db71e431beb5cbc38b0e81.bindPopup(popup_a9c891449ad0c94d6e60b65011f59ed3)
+        ;
+
+        
+    
+    
+            var circle_marker_12e1c150a66a3ea7041e2df53c1f3acd = L.circleMarker(
+                [28.932, 139.329],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.399999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_96c8c263882e5792939551970590eec5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_65f1b9f791ec5e600f5bd79da2ec9572 = $(`<div id="html_65f1b9f791ec5e600f5bd79da2ec9572" style="width: 100.0%; height: 100.0%;"><b>Bonin Islands, Japan region</b><br>Mag: 7.1<br>Date: 1998-08-19</div>`)[0];
+                popup_96c8c263882e5792939551970590eec5.setContent(html_65f1b9f791ec5e600f5bd79da2ec9572);
+            
+        
+
+        circle_marker_12e1c150a66a3ea7041e2df53c1f3acd.bindPopup(popup_96c8c263882e5792939551970590eec5)
+        ;
+
+        
+    
+    
+            ant_path_57fc5c149ef478c0c1086482a5c8bd54 = L.polyline.antPath(
+              [[35.1901081152, 136.82883156130003], [31.8928108179027, 147.10286506510622]],
+              {
+  "stroke": true,
+  "color": "blue",
+  "weight": 4,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "blue",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_51795b5c279edc9bc1076df6beb6b9e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0239e03cb791cf5e2773b9f93ab3cf6 = $(`<div id="html_c0239e03cb791cf5e2773b9f93ab3cf6" style="width: 100.0%; height: 100.0%;">Secular Velocity (Tectonic)</div>`)[0];
+                popup_51795b5c279edc9bc1076df6beb6b9e8.setContent(html_c0239e03cb791cf5e2773b9f93ab3cf6);
+            
+        
+
+        ant_path_57fc5c149ef478c0c1086482a5c8bd54.bindPopup(popup_51795b5c279edc9bc1076df6beb6b9e8)
+        ;
+
+        
+    
+    
+            ant_path_34c30d0787d3b909d345b6c39deaa910 = L.polyline.antPath(
+              [[35.1901081152, 136.82883156130003], [27.08200000709189, 165.49029841741168]],
+              {
+  "stroke": true,
+  "color": "red",
+  "weight": 4,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "red",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_e83dd6f718ecc5e5b0563ace25246f3e);
+        
+    
+        var popup_26cfe831ad8050e6abd4be790fa85e9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ad70513bf0c54711ed58efc548568b1 = $(`<div id="html_9ad70513bf0c54711ed58efc548568b1" style="width: 100.0%; height: 100.0%;">Co-Seismic Jump (Tohoku 2011)</div>`)[0];
+                popup_26cfe831ad8050e6abd4be790fa85e9f.setContent(html_9ad70513bf0c54711ed58efc548568b1);
+            
+        
+
+        ant_path_34c30d0787d3b909d345b6c39deaa910.bindPopup(popup_26cfe831ad8050e6abd4be790fa85e9f)
+        ;
+
+        
+    
+</script>
+</html>
