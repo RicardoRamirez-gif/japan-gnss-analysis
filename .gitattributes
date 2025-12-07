@@ -1,0 +1,2 @@
+# Opción 1: Ignor  all HTML 
+*.html linguist-generated=true
